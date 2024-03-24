@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+    {{>navbar}}
+    <div class="container">
+        <h1>Welcome to Add Product Page of Admin</h1>
+        <form action="/admin/addproduct" method="POST" enctype="multipart/form-data">
+            Name : <input name="name" type="text" placeholder="Enter Name"> <br>
+            Price : <input name="price" type="number" placeholder="Enter Price"> <br>
+            Image: <input name="image" type="file" placeholder="Upload Image"> <br>
+            Description: <input name="description" type="text" placeholder="Enter Description"> <br>
+            Category:
+            <select name="category">
+                <option value="" selected disabled hidden>Choose a Category</option>
+                <option value="clothes">Clothes</option>
+                <option value="food">Food</option>
+                <option value="furniture">Furniture</option>
+                <option value="electronics">Electronics</option>
+            </select>
+             {{!-- <input name="category" type="text" placeholder="Enter Category"> --}}
+              <br>
+            <button type="submit">Add Product</button>
+        </form>
+    </div>
+</body>
+</html>

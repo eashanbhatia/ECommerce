@@ -1,0 +1,14 @@
+{
+    "name": "dominos",
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Frecipes.timesofindia.com%2Frecipes%2Fpizza%2Frs56933159.cms&psig=AOvVaw33-5xTh9paje4M4Qwe7x3t&ust=1708164665815000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCLj2msPPr4QDFQAAAAAdAAAAABAE",
+    "price": { "$numberInt": "200" },
+    "description": "tastyyy pizza ",
+    "seller_details": {
+      "$oid": "65cbae4e2c42ee79a7e2d939"
+    },
+    "category": {
+      "$oid": "65cf0089db3061c2f3ba3089"
+    },
+    "reviews": [],
+    "__v": { "$numberInt": "0" }
+}

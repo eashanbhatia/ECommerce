@@ -1,0 +1,25 @@
+<nav class="navbar"> 
+    <a href="/"><div class="nav-logo nav-item"></div></a>
+    <div class="nav-search nav-item">
+        <input type="text" placeholder="Search Amazon.in" class="nav-input">
+        <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    </div>
+    <div class="nav-signin nav-item"><a href="/signin">Sign In</a></div>
+    <div class="nav-cart nav-item">
+        Cart
+    <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+    {{#if isLoggedIn}}
+    <div class="nav-item nav-logout">
+        <a href="/logout">Logout</a>
+    </div>
+    {{/if}}
+
+    
+    {{#if isAdmin}}
+    <div class="nav-item">
+        <a href="/admin/addproduct">Add Product</a>
+    </div>
+    {{/if}}
+</nav>

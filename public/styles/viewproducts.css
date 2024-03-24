@@ -1,0 +1,21 @@
+.product-item{
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+}
+
+.product-details{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.img{
+    width: 150px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 15px;
+    /* border: 1px solid grey; */
+    padding: 5px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/viewproducts.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+    {{>navbar}}
+
+    <div class="container">
+        <h1>View All Products Page</h1>
+        {{#each productsList as |p|}}
+        <div class="product-item">
+            {{!-- {{p}} --}}
+            <div class="img" style="background-image: url({{p.image}});"></div>
+            <div class="product-details">
+                Name: {{p.name}} <br>
+                Price: {{p.price}} <br>
+                Description: {{p.description}} <br>
+                Seller: {{p.seller_details.username}} <br>
+                Category: {{p.category.categoryName}}
+                {{!-- <img src={{p.image}} alt="Image of Product"> --}}
+            </div>
+            <div class="btn-group">
+                <div class="edit" style="margin: 10px;">
+                    <a href="/admin/editproducts?id={{p._id}}">Edit</a>  
+                </div>
+                <div class="delete" style="margin: 10px;">
+                    <a href="/admin/deleteproducts?id={{p._id}}">Delete</a>
+                </div>
+            </div>            
+        </div>
+
+        {{/each}}
+
+    </div>
+</body>
+</html>
+
+
+
+{{!-- <a href="/admin/editproducts?id={{p._id}}">Edit</a> --}}
+{{!-- Iss upar wali line mein hum jo product ki id hogi usse query parameter mein bhej denge aur fir further use krne ke liye vahi se nikal lenge --}}
